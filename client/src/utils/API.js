@@ -3,9 +3,15 @@ import axios from "axios";
 //set up a socket connection on the client side
 //the install was set on the server side
 import openSocket from 'socket.io-client';
-const  socket = openSocket('http://localhost:3001');
+// const  socket = openSocket('http://localhost:3001');
+// const  socket = openSocket('https://personal-voice-assistance.herokuapp.com/');
 
+  if ( process.env.NODE_ENV === 'production' ) {
+    const  socket = openSocket('https://personal-voice-assistance.herokuapp.com/');
+  } else {
+   const  socket = openSocket('http://localhost:3001');
 
+  }
 
 export default {
   subscribeToTimer: function(cb) {
