@@ -39,6 +39,14 @@ mongoose.connect(
   }
 );
 
+// Any non API GET routes will be directed to our React App and handled by React Router
+app.get("*", function(req, res) {
+  if ( process.env.NODE_ENV === 'production' ) {
+    res.sendFile(__dirname + "/client/build/index.html");
+  } else {
+    res.sendFile(__dirname + "/client/public/index.html");
+  }
+});
 
 // ──────────GOOOGLE TRANSLATER AND ──────────────────────────────────────────────
 
