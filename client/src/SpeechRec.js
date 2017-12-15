@@ -13,7 +13,7 @@ import API from './utils/API';
 import { CLIENT_RENEG_WINDOW } from 'tls';
 //TODO:swith the address on deployment
 // const  socket = openSocket('http://localhost:3001');
-const  socket = openSocket("https://personal-voice-assistance.herokuapp.com/");
+const  socket = openSocket(`${process.env.PUBLIC_URL}`);
 
 // require icons from react icons (no loader needed)
 
