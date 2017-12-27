@@ -1,6 +1,6 @@
 # React Voice Command App
 
-## About This Boilerplate
+## About This App
 
 This is a Node/Express/React app which uses IBM-Watson conversation platform to provice voice assitance.
 
