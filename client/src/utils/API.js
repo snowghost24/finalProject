@@ -5,14 +5,13 @@ import axios from "axios";
 import openSocket from 'socket.io-client';
 // const  socket = openSocket('http://localhost:3001');
 // const  socket = openSocket('https://personal-voice-assistance.herokuapp.com/');
-const  socket = openSocket(`${process.env.PUBLIC_URL}`);
-
-  // if ( process.env.NODE_ENV === 'production' ) {
-  //   const  socket = openSocket('https://personal-voice-assistance.herokuapp.com/');
-  // } else {
-  //  const  socket = openSocket('http://localhost:3001');
-
-  // }
+// const  socket = openSocket(`${process.env.PUBLIC_URL}`);
+var socket;
+  if ( process.env.NODE_ENV === 'production' ) {
+   socket = openSocket('https://personal-voice-assistance.herokuapp.com/');
+  } else {
+     socket = openSocket('http://localhost:3001');
+  }
 
 export default {
   subscribeToTimer: function(cb) {
@@ -24,15 +23,12 @@ export default {
   getFirstMessage: function(cb) {
     socket.on('stop2', message => cb(null, message));
     socket.emit('Wakeup');
-
   },
 
   getOtherMessage: function(cb) {
     socket.on('chat', message => cb(null, message));
     // socket.emit('Wakeup');
-
   },
-
 
   foundData: function(cb) {
     socket.on('retreivedData', theData => cb(null, theData));

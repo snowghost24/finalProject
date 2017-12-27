@@ -13,8 +13,14 @@ import API from './utils/API';
 import { CLIENT_RENEG_WINDOW } from 'tls';
 //TODO:swith the address on deployment
 // const  socket = openSocket('http://localhost:3001');
-const  socket = openSocket(`${process.env.PUBLIC_URL}`);
-
+// const  socket = openSocket(`${process.env.PUBLIC_URL}`);
+// const socket;
+var socket;
+  if ( process.env.NODE_ENV === 'production' ) {
+    socket = openSocket('https://personal-voice-assistance.herokuapp.com/');
+  } else {
+    socket = openSocket('http://localhost:3001');
+  }
 // require icons from react icons (no loader needed)
 
 var Microphone = require('react-icons/lib/fa/microphone');
