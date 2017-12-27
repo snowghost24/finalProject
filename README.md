@@ -6,16 +6,14 @@ This is a Node/Express/React app which uses IBM-Watson conversation platform to 
 
 ## Try any of the following
 
-
-
-``
+```
 change the background color of the talk button to <your color>
 change the background color of the stop button  to <your color>
 insert the logo image
 insert the title image
 change the background color of the image container to <your color>
 
-``
+```
 
 The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
 
