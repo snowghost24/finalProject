@@ -4,7 +4,8 @@
 
 This is a Node/Express/React app which uses IBM-Watson conversation platform to provice voice assitance.
 
-## Try any of the following
+## Style using voice command
+Try any of the following voice command
 
 ```
 change the background color of the talk button to <your color>
@@ -14,40 +15,27 @@ insert the title image
 change the background color of the image container to <your color>
 
 ```
-
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
-
-## Starting the app locally
-
-Start by installing front and backend dependencies. While in this directory, run the following commands:
+## Get information on property
+Try saying the following
 
 ```
-yarn install
-cd client
-yarn install
-cd ..
-``
-
-After both installations complete, run the following command in your terminal:
+1.I need information 
+2. <provide an address with the following format (40 celia drive , Waterbury Connecticut)>
+3. ask for <last date sold> or <how much was it last sold for>
 
 ```
-yarn start
-```
 
-That's it, your app should be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
-## Deployment (Heroku)
-
-After confirming that you have an up to date git repository and a Heroku app created, complete the following:
-
-1. Build the React app for production by running the following command:
+##Post a Tweet on my behalf
+Try saying the following
 
 ```
-yarn build
+1. I want to post a tweet
+2. say "Post <Whatever youd like to post > # <something> "
+
+The message will be posted on my twitter
+- eventually users will sign up with their own twitter accouts
+
 ```
 
-2. Add and commit all changes to git
 
-3. Push to Heroku
 
-If all previous steps were followed correctly, your application should be deployed to Heroku!
