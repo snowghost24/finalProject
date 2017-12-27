@@ -4,6 +4,7 @@
 
 This is a Node/Express/React app which uses IBM-Watson conversation platform to provice voice assitance.
 
+
 ## Style using voice command
 Try any of the following voice command
 
@@ -15,6 +16,7 @@ insert the title image
 change the background color of the image container to <your color>
 
 ```
+
 ## Get information on property
 Try saying the following
 
@@ -25,11 +27,10 @@ Try saying the following
 
 ```
 
-##Post a Tweet on my behalf
+## Post a tweet and see it at @nowayhose24
 Try saying the following
-
 ```
-1. I want to post a tweet
+1. "I want to post a tweet"
 2. say "Post <Whatever youd like to post > # <something> "
 
 The message will be posted on my twitter
